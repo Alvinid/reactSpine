@@ -1,8 +1,17 @@
 const express = require ('express');
 const app = express();
+import  { match } from 'react-router';
+//import routes from './common/router';
 app.use(express.static('public'));
-app.get('/',function(req,res){
-    console.log(req.body,'123')
+app.get('*',function(req,res){
+    // match({ routes, location:req.url },(error,redirectLocation,renderProps)=>{
+    //     console.log('renderProps--',renderProps)
+    //     if(redirectLocation){
+    //         res.redirect(302,redirectLocation.pathname +redirectLocation.search);
+    //     }else if( renderProps ){
+            
+    //     }
+    // })
     res.send(`<html >
     <head>
         <meta charset="UTF-8">
@@ -13,7 +22,6 @@ app.get('/',function(req,res){
     </head>
     <body>
         <div id="exp">111</div>
-        https://cnodejs.org/topic/5865a866189fd5ad6459006c
         
     </body>
     </html>`)
