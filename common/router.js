@@ -1,8 +1,9 @@
 import Index from './contains/index.js';
-import  { Router, Route, browserHistory  } from 'react-router';
+import  { Router, Route, hashHistory  } from 'react-router';
+import React from 'react';
 
 const routers=(
-    <Router history={ browserHistory }>
+    <Router history={ hashHistory }>
         <Route path="/" component={Index} >
 
         </Route>
