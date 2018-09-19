@@ -1,6 +1,7 @@
 const express = require ('express');
 const app = express();
-import  { match, RoutingContext } from 'react-router';
+import  { match, RouterContext } from 'react-router';
+import React from 'react';
 import routes from './common/router';
 import { renderToString } from 'react-dom/server';
 app.use(express.static('public'));
@@ -8,8 +9,10 @@ app.get('*',function(req,res){
     match({ routes, location:req.url },(error,redirectLocation,renderProps)=>{
        // console.log('req--',req.url)
         //console.log('renderProps--',renderProps)
-        if(redirectLocation){
-            res.redirect(302,redirectLocation.pathname +redirectLocation.search);
+        if(error){
+            res.status(500).send('err:'+error.message);
+        }else if( redirectLocation ){
+            res.redirect(302,redirectLocation.pathname + redirectLocation.search)
         }else if( renderProps ){
             var react_stuff = renderToString(<RouterContext {...renderProps} />);
             res.send(`<html >
@@ -19,6 +22,17 @@ app.get('*',function(req,res){
             </head>
             <body>
                 <div id="exp">${react_stuff}</div>
+                
+            </body>
+            </html>`)
+        }else{
+            res.send(`<html >
+            <head>
+                <meta charset="UTF-8">
+                <title>Document</title>
+            </head>
+            <body>
+                <div id="exp">no found router</div>
                 
             </body>
             </html>`)

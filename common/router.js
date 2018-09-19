@@ -3,11 +3,9 @@ import  { Router, Route, hashHistory  } from 'react-router';
 import React from 'react';
 
 const routers=(
-    <Router history={ hashHistory }>
-        <Route path="/" component={Index} >
+        <Route path="/index" component={Index} >
 
         </Route>
-    </Router>
     
 )
 
