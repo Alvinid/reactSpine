@@ -10,10 +10,14 @@ class Index extends Component{
     click(){
         alert('1234');
     }
+    componentDidMount(){
+        alert('wee')
+    }
 
     render(){
+        console.log('sdd')
         return (
-            <div onClick={ this.click }>sephora</div>
+            <div onClick={ this.click } style={{color:"red"}}>sephora</div>
         )
     }
 }

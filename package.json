@@ -26,7 +26,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "webpack --config webpack/webpack.config.js --mode development&&node server.bundle.js"
+    "build": "webpack --config webpack/webpack.server.config.js --mode development&&node server.bundle.js"
   },
   "keywords": [
     "sephora"
