@@ -6,20 +6,19 @@ class Index extends Component{
         super(props)
         this.click=this.click.bind(this)
     }
-
     click(){
         alert('1234');
     }
     componentDidMount(){
-        alert('wee')
+        console.log('wee')
     }
-
     render(){
         console.log('sdd')
         return (
-            <div onClick={ this.click } style={{color:"red"}}>sephora</div>
+            <div onClick={ this.click } style={{color:"red"}}>sephora12wwe</div>
         )
     }
 }
 
 export default Index
+

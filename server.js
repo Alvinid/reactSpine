@@ -22,7 +22,10 @@ app.get('*',function(req,res){
             </head>
             <body>
                 <div id="exp">${react_stuff}</div>
-                
+                <script src="/CDN/react.js"></script>
+                <script src="/CDN/react-dom.min.js"></script>
+                <script src="/CDN/react-dom.js"></script>
+                <script src="/server.client.bundle.js"></script>
             </body>
             </html>`)
         }else{
