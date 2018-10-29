@@ -25,6 +25,8 @@ app.get('*',function(req,res){
                 <script src="/CDN/react.js"></script>
                 <script src="/CDN/react-dom.min.js"></script>
                 <script src="/CDN/react-dom.js"></script>
+                <script src="/CDN/ReactRouter.js"></script>
+                <script src="/CDN/ReactRouter.min.js"></script>
                 <script src="/server.client.bundle.js"></script>
             </body>
             </html>`)

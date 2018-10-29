@@ -3,8 +3,7 @@ import  { Router, Route, hashHistory  } from 'react-router';
 import React from 'react';
 
 const routers=(
-        <Route path="/index" component={Index} >
-
+        <Route path="/" component={Index} >
         </Route>
     
 )
